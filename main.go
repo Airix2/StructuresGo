@@ -13,11 +13,11 @@ func main() {
 		"Colombia",
 		"Paris",
 		customer.New("Alejandro", "Zona Rio", "665123423"),
-		[]invoiceitem.Item{
+		invoiceitem.NewItems(
 			invoiceitem.New(1, "Curso Go", 12.5),
 			invoiceitem.New(2, "Poo Go", 15.5),
 			invoiceitem.New(3, "DB con Go", 20.0),
-		},
+		),
 	)
 	i.SetTotal()
 	fmt.Printf("%+v", i)
